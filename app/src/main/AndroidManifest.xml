@@ -22,7 +22,11 @@
         </activity>
         <activity android:name=".RegisterAs" />
         <activity android:name=".GroupRegister" />
-        <activity android:name=".MemberRegister"></activity>
+        <activity android:name=".MemberRegister" />
+        <activity android:name=".Dashboard" />
+        <activity android:name=".AddExpense" />
+        <activity android:name=".ViewExpense" />
+        <activity android:name=".ViewMembers"></activity>
     </application>
 
 </manifest>

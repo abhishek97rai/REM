@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.android.rem.Dashboard"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    android:background="#D50000">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="List of all Monthly Expenses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@android:color/white"
+            android:padding="10dp"
+            android:id="@+id/viewexptitle"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            />
+
+        <TableLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/exptable"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:stretchColumns="*">
+
+            <TableRow>
+                <TextView
+                    android:text="Item Name"
+                    android:textColor="@android:color/white"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="20dp"
+                    android:padding="10dp" />
+                <TextView
+                    android:text="Price"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginRight="20dp"
+                    android:padding="10dp" />
+                <TextView
+                    android:text="Details"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginRight="20dp"
+                    android:padding="10dp" />
+            </TableRow>
+
+        </TableLayout>
+    </LinearLayout>
+
+</ScrollView>

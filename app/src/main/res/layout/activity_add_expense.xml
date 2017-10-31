@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    android:background="#D50000">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="36dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp">
+
+        <ImageView android:src="@drawable/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="72dp"
+            android:layout_marginBottom="24dp"
+            android:layout_gravity="center_horizontal" />
+
+        <EditText android:id="@+id/item_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:inputType="textCapWords"
+            android:textColorHint="#BDBDBD"
+            android:textColor="@android:color/white"
+            android:fontFamily="sans-serif-medium"
+            android:cursorVisible="true"
+            android:textCursorDrawable="@drawable/mycursor"
+            android:hint="Item Name" />
+
+        <EditText android:id="@+id/item_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:inputType="number"
+            android:textColorHint="#BDBDBD"
+            android:textColor="@android:color/white"
+            android:fontFamily="sans-serif-medium"
+            android:cursorVisible="true"
+            android:textCursorDrawable="@drawable/mycursor"
+            android:hint="Price (In Rupees)" />
+
+        <EditText android:id="@+id/item_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:inputType="text"
+            android:textColorHint="#BDBDBD"
+            android:textColor="@android:color/white"
+            android:fontFamily="sans-serif-medium"
+            android:cursorVisible="true"
+            android:textCursorDrawable="@drawable/mycursor"
+            android:hint="Details"/>
+
+        <Button
+            android:id="@+id/btn_add_exp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:padding="12dp"
+            android:textSize="18dp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/round_button"
+            android:text="Add Expense"/>
+
+    </LinearLayout>
+</ScrollView>
