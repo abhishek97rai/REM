@@ -10,7 +10,7 @@
     android:paddingTop="36dp"
     android:paddingLeft="24dp"
     android:paddingRight="24dp"
-    android:background="#FF5722">
+    android:background="#D50000">
 
     <Button
         android:id="@+id/reg_new_group"

@@ -42,7 +42,6 @@
                     android:gravity="center"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:layout_marginLeft="20dp"
                     android:padding="10dp" />
                 <TextView
                     android:text="Price"
@@ -50,7 +49,6 @@
                     android:textColor="@android:color/white"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:layout_marginRight="20dp"
                     android:padding="10dp" />
                 <TextView
                     android:text="Details"
@@ -58,7 +56,6 @@
                     android:textColor="@android:color/white"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:layout_marginRight="20dp"
                     android:padding="10dp" />
             </TableRow>
 
