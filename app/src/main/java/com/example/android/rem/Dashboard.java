@@ -1,6 +1,7 @@
 package com.example.android.rem;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -8,9 +9,14 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Dashboard extends AppCompatActivity {
+
+    String grp;
+    String mob,name;
+    TextView dash;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +25,16 @@ public class Dashboard extends AppCompatActivity {
 
         Button add = (Button) findViewById(R.id.newexp);
         Button view = (Button) findViewById(R.id.viewexp);
+
+        dash = (TextView) findViewById(R.id.dash);
+
+        grp = getIntent().getStringExtra("GROUP_ID");
+        mob = getIntent().getStringExtra("USER_MOB");
+        name = getIntent().getStringExtra("USER_NAME");
+
+        dash.setText(name + " - Dashboard");
+
+        Toast.makeText(Dashboard.this,"Welcome, " + name, Toast.LENGTH_SHORT).show();
 
         add.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +66,9 @@ public class Dashboard extends AppCompatActivity {
             case R.id.logout:
                 Toast.makeText(getApplicationContext(), "Logging Out...",Toast.LENGTH_SHORT).show();
                 Intent login = new Intent(Dashboard.this, MainActivity.class);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                    finishAffinity();
+                }
                 startActivity(login);
                 return true;
             default:

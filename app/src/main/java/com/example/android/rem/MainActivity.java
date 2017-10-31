@@ -64,10 +64,17 @@ public class MainActivity extends AppCompatActivity {
                             if(snapshot.child(grp).hasChild(mob)){
                                 Log.e("Entered : ","in Snapshot has child grp.mobile");
                                 String toMatch = snapshot.child(grp).child(mob).child("Password").getValue().toString();
-                                Log.e("password val in db is : ",toMatch);
+                                Log.e("password val in db is: ",toMatch);
                                 if(toMatch.equals(pass)){
                                     Log.e("Entered : ","in Snapshot has child grp.mobile and password");
-                                    Toast.makeText(MainActivity.this, "Login Success!", Toast.LENGTH_SHORT).show();
+                                    //Toast.makeText(MainActivity.this, "Login Success!", Toast.LENGTH_SHORT).show();
+                                    String uName = snapshot.child(grp).child(mob).child("Name").getValue().toString();
+                                    Intent intent = new Intent(MainActivity.this,Dashboard.class);
+                                    intent.putExtra("GROUP_ID", grp);
+                                    intent.putExtra("USER_MOB",mob);
+                                    intent.putExtra("USER_NAME",uName);
+                                    startActivity(intent);
+                                    finish();
                                 }
                             }
                             //Toast.makeText(MainActivity.this, "Group exists", Toast.LENGTH_SHORT).show();
