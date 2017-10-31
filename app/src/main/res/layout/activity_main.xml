@@ -21,7 +21,7 @@
             android:layout_gravity="center_horizontal" />
 
         <!-- Email Label -->
-        <EditText android:id="@+id/input_email"
+        <EditText android:id="@+id/login_input_grp_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -31,11 +31,24 @@
             android:fontFamily="sans-serif-medium"
             android:cursorVisible="true"
             android:textCursorDrawable="@drawable/mycursor"
-            android:inputType="textEmailAddress"
-            android:hint="Email" />
+            android:inputType="number"
+            android:hint="Group ID" />
+
+        <EditText android:id="@+id/login_input_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="@android:color/white"
+            android:textColorHint="#BDBDBD"
+            android:fontFamily="sans-serif-medium"
+            android:cursorVisible="true"
+            android:textCursorDrawable="@drawable/mycursor"
+            android:inputType="number"
+            android:hint="Mobile Number" />
 
         <!-- Password Label -->
-        <EditText android:id="@+id/input_password"
+        <EditText android:id="@+id/login_input_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
